@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - BeatBreeze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BeatBreeze</h1>
+            <p>Discover amazing music from around the world</p>
+            <nav class="main-nav">
+                <a href="home.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Search</a>
+                <a href="mood.html" class="nav-link">Mood</a>
+                <a href="history.html" class="nav-link">History</a>
+            </nav>
+        </header>
+
+        <div class="welcome-section">
+            <h2>Welcome to Your Music Discovery Hub</h2>
+            <p>Explore random songs, search by mood, or find exactly what you're looking for</p>
+            
+            <div class="quick-actions">
+                <a href="index.html" class="action-card">
+                    <div class="action-icon">🔍</div>
+                    <h3>Search Songs</h3>
+                    <p>Find specific songs, artists, or albums</p>
+                </a>
+                
+                <a href="mood.html" class="action-card">
+                    <div class="action-icon">🎭</div>
+                    <h3>Mood Music</h3>
+                    <p>Discover music based on your current mood</p>
+                </a>
+                
+                <a href="history.html" class="action-card">
+                    <div class="action-icon">📚</div>
+                    <h3>Your History</h3>
+                    <p>View your search and playback history</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="recommendations-section">
+            <div class="recommendations-header">
+                <h2>Recommended for You</h2>
+                <button id="refresh-recommendations" class="refresh-button">
+                    🔄 Get New Songs
+                </button>
+            </div>
+            
+            <div id="recommendations-loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Finding amazing songs for you...</p>
+            </div>
+            
+            <div id="recommendations-list" class="recommendations-grid"></div>
+        </div>
+
+        <div id="now-playing">
+            <div id="now-playing-info">
+                <p>Currently playing: <span id="current-song">Nothing playing</span></p>
+            </div>
+            <div id="audio-controls">
+                <audio id="audio-player" controls></audio>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>CNo login required</p>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

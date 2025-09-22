@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - BeatBreeze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BeatBreeze Search</h1>
+            <p>Search for your favorite songs and listen to previews</p>
+            <nav class="main-nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link active">Search</a>
+                <a href="mood.html" class="nav-link">Mood</a>
+                <a href="history.html" class="nav-link">History</a>
+            </nav>
+        </header>
+
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for songs, artists, or albums...">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div class="results-container">
+            <div id="results-count"></div>
+            <div id="results-list"></div>
+        </div>
+
+        <div id="now-playing">
+            <div id="now-playing-info">
+                <p>Currently playing: <span id="current-song">Nothing playing</span></p>
+            </div>
+            <div id="audio-controls">
+                <audio id="audio-player" controls></audio>
+            </div>
+        </div>
+
+        <div id="loading" class="hidden">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>No login required</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

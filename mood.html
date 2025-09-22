@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Music - BeatBreeze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MoodBreeze</h1>
+            <p>Discover music based on your mood</p>
+            <nav class="main-nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link">Search</a>
+                <a href="mood.html" class="nav-link active">Mood</a>
+                <a href="history.html" class="nav-link">History</a>
+            </nav>
+        </header>
+
+        <div class="mood-selection">
+            <h2>How are you feeling today?</h2>
+            <p>Choose your mood and discover songs that match your vibe</p>
+            
+            <div class="mood-grid">
+                <div class="mood-card" data-mood="happy" data-search="happy upbeat cheerful">
+                    <div class="mood-icon">😊</div>
+                    <h3>Happy</h3>
+                    <p>Upbeat and cheerful songs</p>
+                </div>
+                
+                <div class="mood-card" data-mood="sad" data-search="sad melancholy heartbreak">
+                    <div class="mood-icon">😢</div>
+                    <h3>Sad</h3>
+                    <p>Emotional and melancholic tunes</p>
+                </div>
+                
+                <div class="mood-card" data-mood="energetic" data-search="energetic pump up high energy">
+                    <div class="mood-icon">⚡</div>
+                    <h3>Energetic</h3>
+                    <p>High-energy and motivating tracks</p>
+                </div>
+                
+                <div class="mood-card" data-mood="relaxed" data-search="chill relaxed calm ambient">
+                    <div class="mood-icon">😌</div>
+                    <h3>Relaxed</h3>
+                    <p>Chill and calming music</p>
+                </div>
+                
+                <div class="mood-card" data-mood="romantic" data-search="romantic love ballad">
+                    <div class="mood-icon">💕</div>
+                    <h3>Romantic</h3>
+                    <p>Love songs and romantic ballads</p>
+                </div>
+                
+                <div class="mood-card" data-mood="party" data-search="party dance club">
+                    <div class="mood-icon">🎉</div>
+                    <h3>Party</h3>
+                    <p>Dance and party anthems</p>
+                </div>
+                
+                <div class="mood-card" data-mood="focus" data-search="instrumental focus study">
+                    <div class="mood-icon">🎯</div>
+                    <h3>Focus</h3>
+                    <p>Music for concentration and study</p>
+                </div>
+                
+                <div class="mood-card" data-mood="workout" data-search="workout gym motivation">
+                    <div class="mood-icon">💪</div>
+                    <h3>Workout</h3>
+                    <p>High-energy fitness music</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mood-results" id="mood-results" style="display: none;">
+            <div class="mood-results-header">
+                <h2 id="selected-mood-title">Songs for your mood</h2>
+                <button id="back-to-moods" class="back-button">← Choose Different Mood</button>
+            </div>
+            
+            <div id="mood-loading" class="hidden">
+                <div class="spinner"></div>
+            </div>
+            
+            <div id="mood-results-count"></div>
+            <div id="mood-results-list"></div>
+        </div>
+
+        <div id="now-playing">
+            <div id="now-playing-info">
+                <p>Currently playing: <span id="current-song">Nothing playing</span></p>
+            </div>
+            <div id="audio-controls">
+                <audio id="audio-player" controls></audio>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>No login required</p>
+    </footer>
+
+    <script src="mood.js"></script>
+</body>
+</html>

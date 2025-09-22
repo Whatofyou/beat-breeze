@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - BeatBreeze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BeatBreeze</h1>
+            <p>Your search and playback history</p>
+            <nav class="main-nav">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="index.html" class="nav-link">Search</a>
+                <a href="mood.html" class="nav-link">Mood</a>
+                <a href="history.html" class="nav-link active">History</a>
+            </nav>
+        </header>
+
+        <div class="history-container">
+            <div class="history-header">
+                <h2>History</h2>
+                <div class="history-tabs">
+                    <button id="search-history-tab" class="history-tab active">Search History</button>
+                    <button id="played-songs-tab" class="history-tab">Played Songs</button>
+                </div>
+                <button id="clear-history" class="clear-history-btn">Clear</button>
+            </div>
+            
+            <div id="search-history-content" class="history-content active">
+                <ul id="search-history-list" class="history-list"></ul>
+                <p id="no-search-history" class="no-history-message">No search history yet</p>
+            </div>
+            
+            <div id="played-songs-content" class="history-content">
+                <div id="played-songs-grid" class="played-songs-grid"></div>
+                <p id="no-played-songs" class="no-history-message">No played songs yet</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>No login required</p>
+    </footer>
+
+    <script src="history.js"></script>
+</body>
+</html>
